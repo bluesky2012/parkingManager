@@ -13,18 +13,23 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public class ParkingPlace {
+    public String get_parkingPlaceNum() {
+        return _parkingPlaceNum;
+    }
+    private String _parkingPlaceNum;
     private int iTotalParkingCount = 0;
+    public int getiTotalParkingCount() {
+        return iTotalParkingCount;
+    }
 
+    private int iParkingLeftCount = 0;
     public int getiParkingLeftCount() {
         return iParkingLeftCount;
     }
 
-    private int iParkingLeftCount = 0;
-
-
     private Map<CarTicket, Car> carMap = new HashMap<CarTicket, Car>();
 
-    public ParkingPlace(int iParkingCount) {
+    public ParkingPlace(String parkingPlaceNum,int iParkingCount) {
         iTotalParkingCount = iParkingCount;
         iParkingLeftCount = iParkingCount;
     }

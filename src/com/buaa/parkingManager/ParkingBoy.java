@@ -13,10 +13,12 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class ParkingBoy {
+    private String _parkingBoyNum = null;
     private ArrayList<ParkingPlace> _parkingPlaces = null;
     private final ParkingChooser _parkingChooser;
 
-    public ParkingBoy(ArrayList<ParkingPlace> parkPlaces, ParkingChooser parkingChooser) {
+    public ParkingBoy(String parkingBoyNum,ArrayList<ParkingPlace> parkPlaces, ParkingChooser parkingChooser) {
+        _parkingBoyNum =  parkingBoyNum;
         this._parkingPlaces=parkPlaces;
         this._parkingChooser = parkingChooser;
     }
@@ -54,6 +56,26 @@ public class ParkingBoy {
         else
         {
             throw new NoCarException("停车场没有找到车，是不是丢了？");
+        }
+    }
+
+    public void printInformation()
+    {
+        System.out.println("我的编号是：" + _parkingBoyNum);
+        if (_parkingPlaces != null)
+        {
+            int iTotalLeft =0;
+            int iTotalCount = 0;
+            for(int i=0;i<_parkingPlaces.size();i++)
+            {
+                System.out.println("  停车场编号：" + _parkingPlaces.get(i).get_parkingPlaceNum());
+                System.out.println("    车位数：" + _parkingPlaces.get(i).getiTotalParkingCount());
+                iTotalCount += _parkingPlaces.get(i).getiTotalParkingCount();
+                System.out.println("    空位数：" + _parkingPlaces.get(i).getiParkingLeftCount());
+                iTotalLeft += _parkingPlaces.get(i).getiParkingLeftCount();
+            }
+            System.out.println("我所有停车场的车位数：" + iTotalCount);
+            System.out.println("我所有停车场的空位数：" + iTotalLeft);
         }
     }
 }

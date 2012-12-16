@@ -21,7 +21,7 @@ public class ParkingBoyChoosing {
     public void initParkingManagerInstance()
     {
         int iTotalParkingCount = 5;
-        this.parkingPlace = new ParkingPlace(iTotalParkingCount);
+        this.parkingPlace = new ParkingPlace("PNum001",iTotalParkingCount);
     }
 
     @Test
@@ -29,10 +29,10 @@ public class ParkingBoyChoosing {
     {
         Car car=new Car();
         int maxParkingNum=5;
-        ParkingPlace parkPlace=new ParkingPlace(maxParkingNum);
+        ParkingPlace parkPlace=new ParkingPlace("PNum001", maxParkingNum);
         ArrayList<ParkingPlace> parkPlaces=new ArrayList<ParkingPlace>();
         parkPlaces.add(parkPlace) ;
-        ParkingBoy parkingBoy= new ParkingBoy(parkPlaces, new FirstAvailableParkingChooser());
+        ParkingBoy parkingBoy= new ParkingBoy("PB001",parkPlaces, new FirstAvailableParkingChooser());
         CarTicket ticket=parkingBoy.parking(car);
         Assert.assertEquals(maxParkingNum, parkingPlace.getiParkingLeftCount());
 

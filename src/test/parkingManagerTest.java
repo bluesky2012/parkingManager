@@ -20,7 +20,7 @@ public class parkingManagerTest {
     public void initParkingManagerInstance()
     {
         int iTotalParkingCount = 5;
-        this.parkingPlace = new ParkingPlace(iTotalParkingCount);
+        this.parkingPlace = new ParkingPlace("PNum001",iTotalParkingCount);
     }
 
     @Test
@@ -59,11 +59,11 @@ public class parkingManagerTest {
     public void paringBoy_ShoudParkCar(){
         Car car = new Car();
         int maxParkingNum =1;
-        ParkingPlace packingPlace = new ParkingPlace(maxParkingNum);
+        ParkingPlace packingPlace = new ParkingPlace("PNum001",maxParkingNum);
         ArrayList<ParkingPlace> parkingPlaces = new ArrayList<ParkingPlace>();
         parkingPlaces.add(packingPlace);
 
-        ParkingBoy parkingBoy = new ParkingBoy(parkingPlaces, new FirstAvailableParkingChooser());
+        ParkingBoy parkingBoy = new ParkingBoy("PB001",parkingPlaces, new FirstAvailableParkingChooser());
         try
         {
             CarTicket ticket = parkingBoy.parking(car);
@@ -79,11 +79,11 @@ public class parkingManagerTest {
     public void paringBoy_ShoudParkout_Car(){
         Car car = new Car();
         int maxParkingNum =2;
-        ParkingPlace packingPlace = new ParkingPlace(maxParkingNum);
+        ParkingPlace packingPlace = new ParkingPlace("",maxParkingNum);
         ArrayList<ParkingPlace> parkingPlaces = new ArrayList<ParkingPlace>();
         parkingPlaces.add(packingPlace);
 
-        ParkingBoy parkingBoy = new ParkingBoy(parkingPlaces, new FirstAvailableParkingChooser());
+        ParkingBoy parkingBoy = new ParkingBoy("PNum001",parkingPlaces, new FirstAvailableParkingChooser());
 
         CarTicket ticket = null;
         try
