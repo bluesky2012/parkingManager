@@ -32,6 +32,7 @@ public class ParkingPlace {
     public ParkingPlace(String parkingPlaceNum,int iParkingCount) {
         iTotalParkingCount = iParkingCount;
         iParkingLeftCount = iParkingCount;
+        _parkingPlaceNum = parkingPlaceNum;
     }
 
     public CarTicket parkIn(Car car) {
@@ -52,9 +53,9 @@ public class ParkingPlace {
         if (carMap.containsKey(carTick))
         {
             Car car = carMap.get(carTick);
+            result = car;
             carMap.remove(carTick);
             iParkingLeftCount ++;
-            result = car;
         }
         return result;
     }

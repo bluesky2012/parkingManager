@@ -48,6 +48,10 @@ public class ParkingBoy {
         for(int i=0; i< _parkingPlaces.size(); i++)
         {
             car =  _parkingPlaces.get(i).parkOut(ticket);
+            if(car != null)
+            {
+                break;
+            }
         }
         if (car != null)
         {
@@ -61,21 +65,22 @@ public class ParkingBoy {
 
     public void printInformation()
     {
-        System.out.println("我的编号是：" + _parkingBoyNum);
+        System.out.println();
+        System.out.println("    " + _parkingBoyNum);
         if (_parkingPlaces != null)
         {
             int iTotalLeft =0;
             int iTotalCount = 0;
             for(int i=0;i<_parkingPlaces.size();i++)
             {
-                System.out.println("  停车场编号：" + _parkingPlaces.get(i).get_parkingPlaceNum());
-                System.out.println("    车位数：" + _parkingPlaces.get(i).getiTotalParkingCount());
+                System.out.println("        停车场编号：" + _parkingPlaces.get(i).get_parkingPlaceNum());
+                System.out.println("            车位数：" + _parkingPlaces.get(i).getiTotalParkingCount());
                 iTotalCount += _parkingPlaces.get(i).getiTotalParkingCount();
-                System.out.println("    空位数：" + _parkingPlaces.get(i).getiParkingLeftCount());
+                System.out.println("            空位数：" + _parkingPlaces.get(i).getiParkingLeftCount());
                 iTotalLeft += _parkingPlaces.get(i).getiParkingLeftCount();
             }
-            System.out.println("我所有停车场的车位数：" + iTotalCount);
-            System.out.println("我所有停车场的空位数：" + iTotalLeft);
+            System.out.println("    " + _parkingBoyNum + "所有停车场的车位数：" + iTotalCount);
+            System.out.println("    " + _parkingBoyNum + "所有停车场的空位数：" + iTotalLeft);
         }
     }
 }
