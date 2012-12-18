@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="ZGYXHIT" name="test.java.org.gradle.ParkinManagerForTest" tests="4" time="0.011" timestamp="2012-12-18T15:29:31">
+  <properties />
+  <testcase classname="test.java.org.gradle.ParkinManagerForTest" name="should_parkingManager_manager_three_parkingBoys_and_printInfo" time="0.006" />
+  <testcase classname="test.java.org.gradle.ParkinManagerForTest" name="should_parkingManager_parking_and_parkingOut_car" time="0.0" />
+  <testcase classname="test.java.org.gradle.ParkinManagerForTest" name="should_parkingManager_manager_one_parkingBoy" time="0.0" />
+  <testcase classname="test.java.org.gradle.ParkinManagerForTest" name="should_parkingManager_manager_two_parkingBoy" time="0.001" />
+  <system-out><![CDATA[Manager:PM001
+
+    ParkingBoy:PB001
+        Parking Place:ParkingPlace:PPNum0
+            Total:20
+            Total Left19
+        Parking Place:ParkingPlace:PPNum1
+            Total:20
+            Total Left19
+        Parking Place:ParkingPlace:PPNum2
+            Total:20
+            Total Left20
+    ParkingBoy:PB001Total:60
+    ParkingBoy:PB001Total Left:58
+
+    ParkingBoy:PB003
+        Parking Place:ParkingPlace:PPNum5
+            Total:20
+            Total Left19
+    ParkingBoy:PB003Total:20
+    ParkingBoy:PB003Total Left:19
+
+    ParkingBoy:PB002
+        Parking Place:ParkingPlace:PPNum3
+            Total:20
+            Total Left19
+        Parking Place:ParkingPlace:PPNum4
+            Total:20
+            Total Left20
+    ParkingBoy:PB002Total:40
+    ParkingBoy:PB002Total Left:39
+
+    Manager:PM001
+        Parking Place:ParkingPlace:PPNum0
+            Total:20
+            Total Left19
+        Parking Place:ParkingPlace:PPNum1
+            Total:20
+            Total Left19
+        Parking Place:ParkingPlace:PPNum2
+            Total:20
+            Total Left20
+        Parking Place:ParkingPlace:PPNum3
+            Total:20
+            Total Left19
+        Parking Place:ParkingPlace:PPNum4
+            Total:20
+            Total Left20
+        Parking Place:ParkingPlace:PPNum5
+            Total:20
+            Total Left19
+    Manager:PM001Total:120
+    Manager:PM001Total Left:116
+Manager:PM001Total Left:120
+Manager:PM001Total:116
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

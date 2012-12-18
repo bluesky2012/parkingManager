@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="ZGYXHIT" name="test.java.org.gradle.parkingManagerTest" tests="5" time="0.025" timestamp="2012-12-18T15:29:31">
+  <properties />
+  <testcase classname="test.java.org.gradle.parkingManagerTest" name="paringBoy_ShoudParkout_Car" time="0.0" />
+  <testcase classname="test.java.org.gradle.parkingManagerTest" name="paringBoy_ShoudParkCar" time="0.0" />
+  <testcase classname="test.java.org.gradle.parkingManagerTest" name="could_park_out_oneself_car" time="0.002" />
+  <testcase classname="test.java.org.gradle.parkingManagerTest" name="should_car_park_in_full_parking_area" time="0.001" />
+  <testcase classname="test.java.org.gradle.parkingManagerTest" name="could_car_park_in_parking_area" time="0.0" />
+  <system-out><![CDATA[鍓╀綑杞︿綅:4
+鍓╀綑杞︿綅:5
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
